@@ -56,12 +56,25 @@ body {
     padding: 10px;
     border-bottom: solid black 1px;
     justify-content: space-around;
+    cursor: pointer;
+    border: solid #A435F0 1px;
+
 }
-.MyLearning{
+
+.categories p:hover {
+    transition: 1s;
+    background-color: transparent;
+    color: black;
+    border: solid #A435F0 1px;
+
+}
+
+.MyLearning {
     position: relative;
     cursor: pointer;
 }
-.MyLearning__popup{
+
+.MyLearning__popup {
     position: absolute;
     background-color: white;
     border: solid black 1px;
@@ -74,29 +87,51 @@ body {
 
 
 }
-.MyLearning:hover .MyLearning__popup{
+
+.MyLearning:hover .MyLearning__popup {
     display: block;
 }
+
 .categories p {
     background-color: #A435F0;
     color: white;
     padding: 10px;
     border-radius: 30px;
+    border: solid #A435F0 1px;
+
 }
 
-.sale-image{
+.sale-image {
     position: relative;
 }
-.sale-image__offer{
+
+.sale-image__offer {
     width: 35%;
     border: solid black 2px;
-    background-color:#40E0F5;
+    background-color: #40E0F5;
     padding: 2%;
     position: absolute;
     top: 10%;
     left: 5%;
     border-radius: 10px;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
+
+@keyframes zoom {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 .sale-image img {
     width: 100%;
 }
@@ -114,6 +149,10 @@ body {
 
 .course-card {
     width: 256px;
+    border: solid 2px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .course-card img {
@@ -121,53 +160,56 @@ body {
     height: 50%;
 }
 
-.topics{
+.topics {
     padding: 10px;
 }
 
-.topics__container{
+.topics__container {
     display: flex;
     gap: 10px;
     margin-top: 10px;
     flex-wrap: wrap;
 }
-.topics__container p{
+
+.topics__container p {
     border: solid grey 2px;
     padding: 10px;
     flex-grow: 1;
     flex-basis: 25%;
+    border-radius: 10px;
 }
 
-.popular{
+.popular {
     padding: 10px;
 }
 
-.popular__container{
+.popular__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 10px;
 }
 
-.footer__one{
+.footer__one {
     display: flex;
     gap: 10px;
 }
 
-.footer__two{
+.footer__two {
     justify-content: space-between;
     display: flex;
     margin: 20px;
     align-items: center;
 }
-.footer{
+
+.footer {
     padding: 30px;
     background-color: black;
     color: white;
-    
+
 }
 
-.footer__one p{
+.footer__one p {
     margin: 20px;
 
 }
