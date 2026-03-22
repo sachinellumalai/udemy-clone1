@@ -213,3 +213,18 @@ body {
     margin: 20px;
 
 }
+
+@media screen and (max-width:800px){
+    body{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:600px){
+    .course-card{
+        flex-basis: 40%;
+    }
+    .categories{
+        display: none;
+    }
+}
